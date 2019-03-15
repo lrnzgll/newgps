@@ -1,0 +1,48 @@
+// Import Google fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+@import url("https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here");
+
+// Define fonts for body and headers
+
+// $body-font: "Just Me Again Down Here", "Helvetica", "sans-serif";
+// $headers-font: "Just Me Again Down Here", "Helvetica", "sans-serif";
+$body-font:"Just Me Again Down Here","Helvetica", "sans-serif";
+$headers-font: "Just Me Again Down Here", "Helvetica", "sans-serif";
+
+// To use a font file (.woff) uncomment following lines
+// @font-face {
+//   font-family: "Font Name";
+//   src: font-url('FontFile.eot');
+//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+//        font-url('FontFile.woff') format('woff'),
+//        font-url('FontFile.ttf') format('truetype')
+// }
+// $my-font: "Font Name";
+
+
+li{
+    font-size: 25px;
+}
+
+input::-webkit-input-placeholder {
+    text-align: center;
+}
+
+input:-moz-placeholder {
+    text-align: center;
+}
+
+input::-moz-placeholder {
+    text-align: center;
+}
+
+input:-ms-input-placeholder {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'entypo', sans-serif;
+    text-transform: uppercase;
+}
+
+

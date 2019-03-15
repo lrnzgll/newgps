@@ -1,0 +1,50 @@
+.devise-log-in {
+    color:black;
+}
+
+.devise-inputs label{
+    font-size: 35px;   
+}
+.devise-inputs input {
+    height: 60px;
+    font-size: 30px;
+}
+
+.devise-button-class{
+   text-align: center;
+}
+
+.devise-button{
+    font-size: 35px;
+    padding-top: 0;
+}
+
+.form-shared{
+    text-align: right;
+    a {
+        font-size: 25px;
+    }
+}
+
+.devise-back{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home-devise {
+    color: black;
+    &:hover {
+        color: #383838;
+    }
+}
+
+.full-height{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.mid-height{
+
+}

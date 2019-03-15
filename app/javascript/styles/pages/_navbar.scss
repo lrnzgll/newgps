@@ -1,0 +1,130 @@
+/* Main navbar */
+.navbar-wagon {
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+    background-color: rgb(241, 241, 241);
+    transition: all 0.3s ease;
+    height: 50px;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo */
+  .navbar-wagon-brand img {
+    height: 50px;
+  }
+  
+  /* User Avatar */
+  .navbar-wagon .avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+  }
+  
+  /* Right section */
+  .navbar-wagon-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  /* Basic navbar item */
+  .navbar-wagon-item {
+    cursor: pointer;
+    padding: 0 20px;
+  }
+  
+  /* Navbar link */
+  .navbar-wagon-link {
+    color: #616668;
+    font-size: 14px;
+  }
+  .navbar-wagon-link:hover {
+    color: #da552f;
+    text-decoration: none;
+  }
+  
+  /* Dropdown menu */
+  .navbar-wagon-dropdown-menu {
+    margin-top: 15px;
+    box-shadow: 1px 1px 4px #E6E6E6;
+    border-color: #E6E6E6;
+  }
+  .navbar-wagon-dropdown-menu li > a {
+    transition: color 0.3s ease;
+    font-weight: lighter !important;
+    color: #999999 !important;
+    font-size: 15px !important;
+    line-height: 22px !important;
+    padding: 10px 20px;
+  }
+  .navbar-wagon-dropdown-menu li > a:hover {
+    background: transparent !important;
+    color: black !important;
+  }
+  .navbar-wagon-dropdown-menu:before {
+    content: ' ';
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    right: 10px;
+    top: -6px;
+    background-color: white;
+    transform: rotate(45deg);
+    border-left: 1px solid #E6E6E6;
+    border-top: 1px solid #E6E6E6;
+  }
+
+.profile-icon{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  &:hover{
+      color: blue;
+  }
+  &:active{
+      color:darkblue;
+  }
+}
+.add-icon{
+  position: fixed;
+  right: 100px;
+  bottom: 20px;
+  height: 73px;
+  width: 73px;
+  display: table;
+  &:hover{
+      color: blue;
+      border-radius: 50px;
+      box-shadow: 2px 2px 3px blue;
+      border: 1px solid white;
+  }
+  &:active{
+      color:darkblue;
+  }
+  border: 1px solid rgba(230, 230, 230, 0.1);
+  border-radius: 70px;
+  i {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      cursor: pointer;
+  }
+}
+
+.profile-identicon{ 
+    border: 1px solid rgba(230, 230, 230, 0.1);
+    border-radius: 50px;
+    position: relative;
+    left: 14px;
+    top: 12px;
+    &:hover{
+        border-radius: 50px;
+        box-shadow: 2px 2px 3px  blue;
+        border:  1px solid white;
+    }
+    img{
+        cursor: pointer;      
+    }
+}

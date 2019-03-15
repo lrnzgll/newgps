@@ -1,0 +1,21 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <a href="/" class="navbar-wagon-brand">
+
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
+    <%= link_to(new_user_registration_path) do %>
+      <li class="regions-list">
+        <p class="regions-name">Sign up</p>
+      </li>
+    <% end %>
+    <%= link_to(new_user_session_path) do %>
+      <li class="regions-list">
+        <p class="regions-name">Login</p>
+      </li>
+    <% end %>
+  </div>
+</div>

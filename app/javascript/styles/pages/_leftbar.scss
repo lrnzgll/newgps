@@ -1,0 +1,21 @@
+.regions-name {
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    padding: 0;
+}
+.regions-list {
+    cursor: pointer;
+    padding: 5px;
+    &:hover {
+        background-color: rgb(225, 225, 225);
+        transition: background 0.25s ease-out, color 0.125s ease-out;
+    }
+}

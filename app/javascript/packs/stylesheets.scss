@@ -1,0 +1,10 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import "../styles/config/fonts";
+@import "../styles/config/colors";
+@import "../styles/config/bootstrap_variables";
+
+// Your CSS partials
+@import "../styles/pages/index";
+@import "../styles/components/index";
+
