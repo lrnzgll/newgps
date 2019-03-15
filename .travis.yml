@@ -8,6 +8,7 @@ sudo: required
 before_install:
 - sudo apt-get update
 - sudo apt-get install google-chrome-stable
+- bundle install --jobs=3 --retry=3
 addons:
   postgresql: '9.6'
 before_script:
