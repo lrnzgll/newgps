@@ -6,22 +6,12 @@
     <%= csp_meta_tag %>
   
     <%= javascript_pack_tag 'application' %>
-    <%= stylesheet_pack_tag 'stylesheets' %>
+    <%= stylesheet_link_tag 'application' %>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'></script>
   </head>
 
   <body>
     <%= render "shared/navbar"%>
-    <div class="app">
-  <div class="container-fluid no-padding main-view">
-    <div class="row no-margin">
-      <div class="col-md-2 no-padding">
-        <%= render "shared/leftbar", locals: {countries: @content.countries}%>
-      </div>
-      <div class="col-md-10 no-padding">
-      <div class="rightbar">
-        <%= yield %>
-      </div>
-    </div>
-  </div>
+    <%= yield %>
   </body>
 </html>
