@@ -3,7 +3,7 @@ class CreatePlaceOfInterests < ActiveRecord::Migration[5.2]
     create_table :place_of_interests do |t|
       t.string :name
       t.text :description
-      t.references :region, foreign_key: true
+      t.references :county, foreign_key: true
 
       t.timestamps
     end

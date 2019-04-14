@@ -18,6 +18,8 @@ GEM
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    actionpack-page_caching (1.1.1)
+      actionpack (>= 4.0.0, < 6)
     actionview (5.2.2.1)
       activesupport (= 5.2.2.1)
       builder (~> 3.1)
@@ -105,7 +107,10 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
+    connection_pool (2.2.2)
     crass (1.0.4)
+    d3-rails (5.7.0)
+      railties (>= 3.1)
     devise (4.6.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -128,6 +133,7 @@ GEM
       sass (>= 3.2)
     friendly_id (5.2.5)
       activerecord (>= 4.0.0)
+    geocoder (1.5.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     gravatar_image_tag (1.2.0)
@@ -182,6 +188,8 @@ GEM
     rack (2.0.6)
     rack-contrib (2.1.0)
       rack (~> 2.0)
+    rack-protection (2.0.5)
+      rack
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -269,6 +277,13 @@ GEM
       rubyzip (~> 1.2, >= 1.2.2)
     shoulda-matchers (4.0.1)
       activesupport (>= 4.2.0)
+    sidekiq (5.2.6)
+      connection_pool (~> 2.2, >= 2.2.2)
+      rack (>= 1.5.0)
+      rack-protection (>= 1.5.0)
+      redis (>= 3.3.5, < 5)
+    sidekiq-failures (1.0.0)
+      sidekiq (>= 4.0.0)
     simple_discussion (1.0.0)
       font-awesome-sass (~> 4.7.0)
       friendly_id (>= 5.2.0)
@@ -328,6 +343,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpack-page_caching
   acts_as_votable (~> 0.12.0)
   algoliasearch-rails
   awesome_print
@@ -342,10 +358,12 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  d3-rails
   devise
   factory_bot_rails
   faker
   friendly_id (~> 5.2.4)
+  geocoder
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
@@ -361,6 +379,8 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   selenium-webdriver
   shoulda-matchers
+  sidekiq
+  sidekiq-failures (~> 1.0)
   simple_discussion
   simple_form
   simplecov
