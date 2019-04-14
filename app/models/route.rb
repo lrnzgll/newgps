@@ -6,6 +6,7 @@ class Route < ApplicationRecord
   has_many :kinds,inverse_of: :route, dependent: :destroy
   has_many :surfaces,inverse_of: :route, dependent: :destroy
   has_many :route_locations,inverse_of: :route, dependent: :destroy
+  has_many :regions, through: :region_routes
 
   belongs_to :user, inverse_of: :routes
 
@@ -17,8 +18,7 @@ class Route < ApplicationRecord
 
 
   def add_view
-    self.views_counter += 1
-    self.save
+    RouteAddViewJob.perform_later(self.id)
   end
 
 end

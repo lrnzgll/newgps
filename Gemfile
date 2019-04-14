@@ -37,6 +37,12 @@ gem 'jquery-rails'
 
 gem 'simple_form'
 gem 'simple_discussion'
+gem "actionpack-page_caching"
+gem "geocoder"
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
+
+gem "d3-rails"
 
 
 

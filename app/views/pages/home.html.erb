@@ -3,10 +3,18 @@
 </div>
 <div class="container-fluid cards">
   <div class="row">
-    <%= render partial: "shared/intro_page/routes_by_region", collection: @intro_page_content.routes_by_region, as: :region %> 
+    <%= cache @intro_page_content.routes_by_region do %>
+      <%= render partial: "shared/intro_page/routes_by_region", collection: @intro_page_content.routes_by_region, as: :region %>
+    <% end %> 
+  </div>
+  <div class="row">
+    <div class="home_page_data">
+      <div class="col-xs-12 col-sm-6">
+        <div class="data_routes_by_region">
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
 <%= render partial: "shared/intro_page/most_favourite_headers", locals: {routes: @intro_page_content.most_favourites_routes}%>
 <%= render partial: "shared/intro_page/new_routes_headers", locals: {routes: @intro_page_content.new_routes}%>
-

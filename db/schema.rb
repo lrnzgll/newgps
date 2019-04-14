@@ -10,16 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_31_222248) do
+ActiveRecord::Schema.define(version: 2019_04_03_212936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "counties", force: :cascade do |t|
+    t.string "name"
+    t.string "slug"
+    t.bigint "region_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["region_id"], name: "index_counties_on_region_id"
+  end
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "county_routes", force: :cascade do |t|
+    t.bigint "county_id"
+    t.bigint "route_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["county_id"], name: "index_county_routes_on_county_id"
+    t.index ["route_id"], name: "index_county_routes_on_route_id"
   end
 
   create_table "forum_categories", id: :serial, force: :cascade do |t|
@@ -142,6 +160,14 @@ ActiveRecord::Schema.define(version: 2019_03_31_222248) do
     t.index ["route_id"], name: "index_surfaces_on_route_id"
   end
 
+  create_table "towns", force: :cascade do |t|
+    t.string "name"
+    t.bigint "county_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["county_id"], name: "index_towns_on_county_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -170,6 +196,9 @@ ActiveRecord::Schema.define(version: 2019_03_31_222248) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
+  add_foreign_key "counties", "regions"
+  add_foreign_key "county_routes", "counties"
+  add_foreign_key "county_routes", "routes"
   add_foreign_key "forum_posts", "forum_threads"
   add_foreign_key "forum_posts", "users"
   add_foreign_key "forum_subscriptions", "forum_threads"
@@ -184,4 +213,5 @@ ActiveRecord::Schema.define(version: 2019_03_31_222248) do
   add_foreign_key "route_locations", "routes"
   add_foreign_key "routes", "users"
   add_foreign_key "surfaces", "routes"
+  add_foreign_key "towns", "counties"
 end

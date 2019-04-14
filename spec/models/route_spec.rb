@@ -37,11 +37,5 @@ RSpec.describe Route, type: :model do
     
   end
 
-  describe "#add_view" do
-    it "add 1 to the route visit_counter field" do
-      expect{girolagodivarese.add_view}.to change{girolagodivarese.views_counter}.by(1)
-    end
-  end
-
   it { should belong_to :user }
 end
