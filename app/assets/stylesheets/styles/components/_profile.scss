@@ -1,0 +1,12 @@
+.profile-icon{
+  img{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    &:hover{
+      transform: scale(1.05);
+      transition: all .1s ease-in-out;
+    }
+  }
+
+}

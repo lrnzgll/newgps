@@ -14,4 +14,8 @@ class Home::IntroPageFacade
   def data_regions_routes
     @data_regions_routes ||= Region.includes(:routes).order(name: :asc).group(:id).pluck(:name, Arel.sql('count(routes.id)'))
   end
+  def most_active_users
+    @most_active_users ||= User.joins(:routes).group(:id).order(Arel.sql('COUNT(routes.id) DESC')).limit(10).pluck(:id, :username, Arel.sql('count(routes.id)'))
+  end
+  
 end

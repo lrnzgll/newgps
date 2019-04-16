@@ -4,7 +4,7 @@
     background-color: rgb(241, 241, 241);
     transition: all 0.3s ease;
     height: 50px;
-    padding: 0px 30px;
+    padding: 0px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,7 +12,7 @@
   
   /* Logo */
   .navbar-wagon-brand img {
-    height: 50px;
+    height: 30px;
   }
   
   /* User Avatar */
@@ -75,56 +75,3 @@
     border-left: 1px solid #E6E6E6;
     border-top: 1px solid #E6E6E6;
   }
-
-.profile-icon{
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  &:hover{
-      color: blue;
-  }
-  &:active{
-      color:darkblue;
-  }
-}
-.add-icon{
-  position: fixed;
-  right: 100px;
-  bottom: 20px;
-  height: 73px;
-  width: 73px;
-  display: table;
-  &:hover{
-      color: blue;
-      border-radius: 50px;
-      box-shadow: 2px 2px 3px blue;
-      border: 1px solid white;
-  }
-  &:active{
-      color:darkblue;
-  }
-  border: 1px solid rgba(230, 230, 230, 0.1);
-  border-radius: 70px;
-  i {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      cursor: pointer;
-  }
-}
-
-.profile-identicon{ 
-    border: 1px solid rgba(230, 230, 230, 0.1);
-    border-radius: 50px;
-    position: relative;
-    left: 14px;
-    top: 12px;
-    &:hover{
-        border-radius: 50px;
-        box-shadow: 2px 2px 3px  blue;
-        border:  1px solid white;
-    }
-    img{
-        cursor: pointer;      
-    }
-}
