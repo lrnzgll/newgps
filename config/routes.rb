@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :regions
   resources :counties
   resources :routes
+  resources :users
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :home
