@@ -1,11 +1,12 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :data]
+  skip_before_action :authenticate_user!, only: [:home, :search]
 
   def home
     @intro_page_content ||= Home::IntroPageFacade.new
+    gon.data = @intro_page_content.data_regions_routes
   end
 
-  def data
-    render json: {data: Home::IntroPageFacade.new.data_regions_routes}
+  def search
+    @search_content ||= Home::SearchFacade.new
   end
 end

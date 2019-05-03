@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :controllers
   devise_for :users
   root to: 'pages#home'
-  get 'pages/data', defaults: { format: :json }
+  post '/search', to: 'pages#search'
   resources :regions
   resources :counties
   resources :routes
