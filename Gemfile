@@ -43,6 +43,9 @@ gem 'sidekiq'
 gem 'sidekiq-failures', '~> 1.0'
 
 gem "d3-rails"
+gem 'gon'
+gem 'rabl'
+gem 'oj'
 
 
 

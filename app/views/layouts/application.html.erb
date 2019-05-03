@@ -4,6 +4,7 @@
     <title>A tutta pista</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= include_gon %>
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
@@ -13,6 +14,6 @@
   <body>
     <%= render "shared/navbar"%>
     <%= yield %>
-    <%= render partial: 'shared/profile'%>
+    <%= render 'shared/profile'%>
   </body>
 </html>

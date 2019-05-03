@@ -1,6 +1,32 @@
 .banner {
-  img{
-    width: 100%;
+  color: white;
+  text-align: center;
+  height: 600px;
+  background-size: cover !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  .search {
+    position: relative;
+    width: 440px;
+    height: 70px;
+    margin: 0 auto;
   }
-
+  .search-input {
+    position: absolute;
+    left: 0;
+    font-size: 26px;
+    width: 320px !important;
+    border-radius: 11px 0 0 11px !important;
+    border: 0 !important;
+    outline: none !important;
+    color: $gray !important;
+    padding: 0 0 2px 15px;
+    height: 70px;
+    background-color: #fff !important;
+    text-transform: uppercase;
+  }
+  
 }

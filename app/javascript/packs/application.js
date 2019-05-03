@@ -9,5 +9,5 @@
 var Turbolinks = require("turbolinks")
 Turbolinks.start()
 import 'bootstrap/dist/js/bootstrap';
-import './data_visualization.js.erb'
+
 

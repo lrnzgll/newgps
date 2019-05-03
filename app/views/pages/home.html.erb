@@ -1,7 +1,4 @@
 <%= render partial: "shared/intro_page/banner"%>
 <%= render partial: "shared/intro_page/intro_regions", locals: {regions: @intro_page_content.routes_by_region}%>
-
-
 <%= render partial: "shared/intro_page/most_favourite_headers", locals: {routes: @intro_page_content.most_favourites_routes}%>
 <%= render partial: "shared/intro_page/new_routes_headers", locals: {routes: @intro_page_content.new_routes}%>
-<%= render partial: "shared/intro_page/most_active_users", locals: {users: @intro_page_content.most_active_users}%>

@@ -1,4 +1,5 @@
 .region-card {
+    opacity: 0.95;
     height: 175px;
     text-shadow: 0 2px 2px rgba(0,0,0,0.8);
     background-size: cover !important;
@@ -6,10 +7,12 @@
     color: white;
     position: relative;
     margin-top: 10px;
+    box-shadow: inset 0 1px 2px rgba(255,255,255, .35), 0px 1px 6px rgba(0,246,255,.5);
+    border: 1px solid #0a5378;
+    border-radius: 4px;
     &:hover{
-      transform: scale(1.01);
-      transition: all .1s ease-in-out;
-
+      opacity: 1;
+      box-shadow: inset 0 1px 2px rgba(255,255,255, .85), 0px 1px 6px rgba(0,246,255,.9);
     }
     h2{
       color: white;
