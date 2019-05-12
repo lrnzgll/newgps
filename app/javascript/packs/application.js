@@ -9,5 +9,3 @@
 var Turbolinks = require("turbolinks")
 Turbolinks.start()
 import 'bootstrap/dist/js/bootstrap';
-
-

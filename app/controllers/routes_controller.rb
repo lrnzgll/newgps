@@ -1,15 +1,29 @@
 class RoutesController < ApplicationController
-  
-  before_action :set_route, only: [:show]
-  before_action :adjust_visit_counter, only: [:show]
-  skip_before_action :authenticate_user!, only: [:show]
+  layout "route"
+
+  before_action :set_route, only: [:home, :data, :comments]
+  before_action :adjust_visit_counter, only: [:home, :data, :comments]
+  before_action :set_facade, only: [:home, :data, :comments]
+  skip_before_action :authenticate_user!, only: [:home, :data, :comments]
     
-  def show
+  def home
+
   end
 
+  def data
+    
+  end
+
+  def comments
+    
+  end
 
   private
-  # Use callbacks to share common setup or constraints between actions.
+
+  def set_facade
+    @content = Route::RouteFacade.new(@route)
+  end
+
   def set_route
     @route ||= Route.find(params[:id])
   end

@@ -46,7 +46,10 @@ gem "d3-rails"
 gem 'gon'
 gem 'rabl'
 gem 'oj'
-
+gem 'render_async'
+gem 'forecast_io'
+gem 'ruby-limiter'
+gem 'activerecord-postgis-adapter'
 
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -66,6 +69,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'capistrano', '~> 3.10.0'
   gem 'capistrano-secrets-yml', '~> 1.1.0'
+  gem "figaro"
 end
 
 group :development do
@@ -75,7 +79,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'meta_request'
   gem 'bullet'
   gem 'faker'
   gem 'betterlorem'

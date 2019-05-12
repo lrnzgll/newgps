@@ -1,4 +1,4 @@
-<%= link_to route_path(route.id) do %>
+<%= link_to home_route_path(route.id) do %>
   <div class="table-row">
     <div class="wrapper attributes">
       <div class="wrapper title-comment-module-reporter">
@@ -22,8 +22,8 @@
       <div class="column add-comment"><span class="glyphicon glyphicon-comment" /></div>
     </div>
     <div class="wrapper dates">
-      <div class="column date"><%=route.created_at.strftime("%b %d, %Y")%></div>
-      <div class="column date"><%=route.updated_at.strftime("%b %d, %Y")%></div>
+      <div class="column date"><%=route.created_at.strftime("%d/%m/%Y")%></div>
+      <div class="column date"><%=route.updated_at.strftime("%d/%m/%Y")%></div>
     </div>
   </div>
 <% end %>
