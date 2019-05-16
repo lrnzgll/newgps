@@ -6,7 +6,6 @@ class Region < ApplicationRecord
   has_many :region_routes, dependent: :destroy
   has_many :counties, dependent: :destroy
 
-  has_many :place_of_interests, dependent: :destroy
   has_many :routes, through: :region_routes
   has_many :towns, through: :counties
 
