@@ -1,8 +1,7 @@
-<div class="active_users">
-</div>
-
+<div class="active_users"></div>
 
 <script>
+
 const svg = d3.select('.active_users')
   .append('svg')
     .attr('width',1200)
@@ -25,18 +24,18 @@ const xAxisGroup = graph.append('g')
 const yAxisGroup = graph.append('g');
 
   const y = d3.scaleLinear()
-    .domain([0, d3.max(gon.data, d => d.count)])
+    .domain([0, d3.max('<%=escape_javascript  @data  %>', d => d.count)])
     .range([graphHeight, 0]);
 
   const x = d3.scaleBand()
-    .domain(gon.data.map(item => item.region))
+    .domain('<%=j  @data.to_json  %>'.map(item => item.region))
     .range([0, graphWidth])
     .paddingInner(0.2)
     .paddingOuter(0.2);
 
   // join the data to circs
   const rects = graph.selectAll('rect')
-    .data(gon.data);
+    .data('<%=j @data.to_json  %>');
 
   // add attrs to circs already in the DOM
   rects.attr('width', x.bandwidth)
@@ -64,4 +63,5 @@ const yAxisGroup = graph.append('g');
     .attr('transform', 'rotate(-40)')
     .attr('font-size', '15px')
     .attr('text-anchor', 'end')
+</script>
 </script>

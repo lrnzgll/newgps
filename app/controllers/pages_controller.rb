@@ -3,7 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @intro_page_content ||= Home::IntroPageFacade.new
-    gon.data = @intro_page_content.data_regions_routes
   end
 
   def search

@@ -20,6 +20,7 @@ RSpec.describe County, type: :model do
 
   describe "#destroy" do
     it { expect(subject).to have_many(:county_routes).dependent(:destroy) }
+    it { expect(subject).to have_many(:place_of_interests).dependent(:destroy) }
   end
   it { should belong_to :region }
 end

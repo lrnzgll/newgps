@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_212936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "postgis"
 
   create_table "counties", force: :cascade do |t|
     t.string "name"
@@ -99,10 +100,10 @@ ActiveRecord::Schema.define(version: 2019_04_03_212936) do
   create_table "place_of_interests", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.bigint "region_id"
+    t.bigint "county_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["region_id"], name: "index_place_of_interests_on_region_id"
+    t.index ["county_id"], name: "index_place_of_interests_on_county_id"
   end
 
   create_table "region_routes", force: :cascade do |t|
@@ -162,6 +163,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_212936) do
 
   create_table "towns", force: :cascade do |t|
     t.string "name"
+    t.geography "lnglat", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}
     t.bigint "county_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -206,7 +208,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_212936) do
   add_foreign_key "forum_threads", "forum_categories"
   add_foreign_key "forum_threads", "users"
   add_foreign_key "kinds", "routes"
-  add_foreign_key "place_of_interests", "regions"
+  add_foreign_key "place_of_interests", "counties"
   add_foreign_key "region_routes", "regions"
   add_foreign_key "region_routes", "routes"
   add_foreign_key "regions", "countries"

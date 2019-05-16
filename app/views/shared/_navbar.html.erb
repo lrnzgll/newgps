@@ -11,15 +11,23 @@
         <p class="regions-name">Forum</p>
       </li>
     <% end %>
-    <%= link_to(new_user_registration_path) do %>
-      <li class="regions-list">
-        <p class="regions-name">Iscriviti</p>
-      </li>
-    <% end %>
-    <%= link_to(new_user_session_path) do %>
-      <li class="regions-list">
-        <p class="regions-name">Login</p>
-      </li>
+    <% if current_user %>
+      <%= link_to(destroy_user_session_path, method: :delete ) do %>
+        <li class="regions-list">
+          <p class="regions-name">Logout</p>
+        </li>
+      <% end %>
+    <% else %>
+      <%= link_to(new_user_registration_path) do %>
+        <li class="regions-list">
+          <p class="regions-name">Iscriviti</p>
+        </li>
+      <% end %>
+      <%= link_to(new_user_session_path) do %>
+        <li class="regions-list">
+          <p class="regions-name">Login</p>
+        </li>
+      <% end %>
     <% end %>
   </div>
 </div>

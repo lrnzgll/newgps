@@ -33,3 +33,6 @@ yarn-debug.log*
 .yarn-integrity
 coverage
 /config/secret.yml
+
+# Ignore application configuration
+/config/application.yml

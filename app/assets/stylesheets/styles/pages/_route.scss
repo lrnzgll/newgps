@@ -1,0 +1,47 @@
+.route-sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 70px;
+  height: 100%;
+  background-color: rgb(200, 200, 230);
+  .sidebar-item {
+    line-height: 1;
+    font-size: 25px;
+    color: #f2f2f2;
+    cursor: pointer;
+    padding: 10px 0;
+    margin: 15px 4px;
+    text-align: center;
+    background-color: rgb(200, 200, 230);
+    border: solid 4px rgba(120, 120, 180, 0);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    &:hover {
+      text-shadow: 0 0 25px rgba(100, 100, 150, 0.9);
+    }
+    &.sidebar-active {
+      border-color:white;
+      margin-left: 28px;
+      &:hover {
+        text-shadow: none;
+      }
+    }
+  }
+}
+.route-main {
+  padding: 15px;
+  margin-top: 30px;
+  min-height: 90vh;
+  border-radius: 2px;
+  box-shadow: 2px 0 1px rgba(100, 100, 100, 0.15);
+  background: rgb(242, 242, 242);
+}
+.small-table {
+  margin: 5px;
+  background-color: white;
+  box-shadow: 0 0 1px 1px 1px black;
+  border-radius: 2px;
+  border: 1px rgba(100,100,100,0.2);
+}

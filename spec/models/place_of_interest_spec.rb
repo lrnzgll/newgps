@@ -17,5 +17,5 @@ RSpec.describe PlaceOfInterest, type: :model do
     expect(tigros).to_not be_valid
   end 
 
-  it { should belong_to :region }
+  it { should belong_to :county }
 end
